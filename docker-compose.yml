@@ -4,6 +4,7 @@ services:
   mysql:
     container_name: mysqlserver
     image: mysql:5.5
+    network_mode: bridge
     volumes:
        - /storage/docker/mysql-datadir:/var/lib/mysql
     restart: always
